@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zacky — Multimedia Portfolio</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Peach+Keen+JF&display=swap" rel="stylesheet">
+<style>
+:root {
+    --primary-black: #000000;
+    --primary-green: #34b98a;
+    --primary-yellow: #ffd542;
+    --primary-pink: #f59ab7;
+    --secondary-blue: #244b9c;
+    --secondary-teal: #366c7f;
+    --secondary-red: #e04536;
+    --font-primary: 'Baloo 2', cursive;
+    --font-secondary: 'Peach Keen JF', cursive;
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-primary);
+    background: #fff;
+    color: var(--primary-black);
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--primary-green);
+    z-index: 1000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+header img { height: 50px; }
+
+nav a {
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    transition: color 0.2s;
+}
+nav a:hover { color: var(--primary-pink); }
+
+section { 
+    padding: 6rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#hero {
+    background-color: var(--primary-green);
+    color: #fff;
+    font-family: var(--font-secondary);
+    padding: 8rem 2rem 4rem 2rem;
+    text-align: center;
+}
+
+#hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+#hero p { font-size: 1.2rem; max-width: 600px; line-height: 1.5; }
+
+/* Portfolio Section */
+#portfolio { 
+    background-color: #f5f5f5; 
+    color: var(--primary-black);
+    background-image: url('media/images/doodle-pattern.png'); /* subtle doodle undertone */
+    background-repeat: repeat;
+    background-size: 150px;
+    opacity: 0.95;
+}
+
+.portfolio-subsection {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 4rem;
+}
+
+.portfolio-subsection h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card, .poster-card {
+    position: relative;
+    background: #fff;
+    border: 2px solid var(--primary-black);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover, .poster-card:hover {
+    transform: scale(1.03);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+.project-card img, .poster-card img, .poster-card video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card h3, .poster-card h3 {
+    padding: 0.8rem;
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+}
+
+/* Contact Section */
+#contact { background-color: var(--secondary-teal); color: #fff; padding: 4rem 2rem; }
+
+#contact h2 { font-family: var(--font-secondary); margin-bottom: 2rem; }
+#contact p { margin-bottom: 0.5rem; font-size: 1.2rem; }
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--primary-black);
+    color: #fff;
+    font-family: var(--font-secondary);
+}
+
+@media (max-width: 768px) {
+    header { flex-direction: column; }
+    nav a { margin-left: 0; margin-top: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Zacky Logo">
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="hero">
+    <h1>Zacky — Multimedia Designer</h1>
+    <p>Motion Graphics | 3D | Posters | Hero Shots | Looping Videos</p>
+</section>
+
+<section id="portfolio">
+    <div class="portfolio-subsection" id="posters">
+        <h2>Posters</h2>
+        <div class="portfolio-grid">
+            <div class="poster-card">
+                <img src="media/images/30_x_40_1.png" alt="Poster 1">
+                <h3>Poster One</h3>
+            </div>
+            <div class="poster-card">
+                <img src="media/images/30_x_40_2.png" alt="Poster 2">
+                <h3>Poster Two</h3>
+            </div>
+            <div class="poster-card">
+                <img src="media/images/30_x_40_3.png" alt="Poster 3">
+                <h3>Poster Three</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-subsection" id="hero-shots">
+        <h2>Hero Shots</h2>
+        <div class="portfolio-grid">
+            <div class="poster-card">
+                <img src="media/images/Ocean Test DoF Test 2.png" alt="Hero Shot 1">
+                <h3>Hero Shot 1</h3>
+            </div>
+            <div class="poster-card">
+                <img src="media/images/Kixi Glass Dispersion 2.png" alt="Hero Shot 2">
+                <h3>Hero Shot 2</h3>
+            </div>
+            <div class="poster-card">
+                <img src="media/images/Kixi Glass Dispersion 3.png" alt="Hero Shot 3">
+                <h3>Hero Shot 3</h3>
+            </div>
+            <div class="poster-card">
+                <img src="media/images/Kixi Glass Dispersion.png" alt="Hero Shot 4">
+                <h3>Hero Shot 4</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-subsection" id="looping-videos">
+        <h2>Looping Videos</h2>
+        <div class="portfolio-grid">
+            <div class="poster-card">
+                <video src="media/videos/loop1.mp4" autoplay muted loop></video>
+                <h3>Looping Video 1</h3>
+            </div>
+            <div class="poster-card">
+                <video src="media/videos/loop2.mp4" autoplay muted loop></video>
+                <h3>Looping Video 2</h3>
+            </div>
+            <div class="poster-card">
+                <video src="media/videos/loop3.mp4" autoplay muted loop></video>
+                <h3>Looping Video 3</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: zacky@example.com</p>
+    <p>Alternate Email: contact.zacky@example.com</p>
+    <p>Phone: +27 123 456 789</p>
+    <p>WhatsApp: +27 987 654 321</p>
+</section>
+
+<footer>
+    &copy; 2026 Zacky. All rights reserved.
+</footer>
+
+</body>
+</html>
